@@ -27,15 +27,18 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              _logo(),
-              _loginTextFileds(),
-              _lginButton(),
-            ],
+    return GestureDetector(
+      onTap: FocusScope.of(context).unfocus,
+      child: Scaffold(
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _logo(),
+                _loginTextFileds(),
+                _lginButton(),
+              ],
+            ),
           ),
         ),
       ),
@@ -62,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                         borderSide: BorderSide(width: 2.0, color: Colors.grey)),
                     focusedBorder: UnderlineInputBorder(
                         borderSide:
-                            BorderSide(width: 2.0, color: Colors.black))),
+                            BorderSide(width: 2.0, color: Colors.grey))),
               ),
             ),
             Padding(
@@ -76,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                         borderSide: BorderSide(width: 2.0, color: Colors.grey)),
                     focusedBorder: UnderlineInputBorder(
                         borderSide:
-                            BorderSide(width: 2.0, color: Colors.black))),
+                            BorderSide(width: 2.0, color: Colors.grey))),
               ),
             ),
           ],

@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         "/main": (context) => const MainPage(),
       },
       theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
       initialRoute: "/",
     );
   }
